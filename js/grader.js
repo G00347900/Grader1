@@ -1,12 +1,12 @@
 function gradeResult() {
 	
 	var myEnglishResult = parseInt(document.getElementById("value1").value);
-	var myIrishResult = parseInt(document.getElementById("value1").value);
-	var myMathsResult = parseInt(document.getElementById("value1").value);
+	var myIrishResult = parseInt(document.getElementById("value2").value);
+	var myMathsResult = parseInt(document.getElementById("value3").value);
 	
-	var Englishgrade;
-	var Irishgrade;
-	var Mathsgrade;
+	var englishGrade;
+	var irishGrade;
+	var mathsGrade;
 	
 	
 	if (!myEnglishResult){
@@ -15,54 +15,52 @@ function gradeResult() {
 	}
 	else {
 		if (myEnglishResult > 90) {
-			Englishgrade = "A" ;
+			englishGrade = "A" ;
 		} else if (myEnglishResult > 80) {
-			Englishgrade = "B";
+			englishGrade = "B";
 		} else {
-			Englishgrade ="F";
+			englishGrade ="F";
 		}
-		
-	if (!myEnglishResult){
-		alert("Please enter a result");
-	
 	}
-	else {
-		if (myIrishResult > 90) {
-			Irishgrade = "A" ;
-		} else if (myIrishResult > 80) {
-			Irishgrade = "B";
-		} else {
-			Irishgrade ="F";
-		}
-		
+	
 	if (!myIrishResult){
 		alert("Please enter a result");
 	
 	}
 	else {
-		if (myMathsResult > 90) {
-			Mathsgrade = "A" ;
-		} else if (myMathsResult > 80) {
-			Mathsgrade = "B";
+		if (myIrishResult > 90) {
+			irishGrade = "A" ;
+		} else if (myIrishResult > 80) {
+			irishGrade = "B";
 		} else {
-			Mathsgrade ="F";
+			irishGrade ="F";
 		}
 	}
-	}
-	}
-}
-		
-		
-		var EnglishMessage = "Your result of" + myEnglishResult + "get you a grade" + EnglishGrade;
-		console.log(EnglishMessage);
-		document.getElementById("resultsentence").innerHTML = EnglishMessage;
-		
-		var IrishMessage = "Your result of" + myIrishResult + "get you a grade" + IrishGrade;
-		console.log(IrishMessage);
-		document.getElementById("resultsentence").innerHTML = IrishMessage;
-		
-		var MathsMessage = "Your result of" + myMathsResult + "get you a grade" + MathsGrade;
-		console.log(MathsMessage);
-		document.getElementById("resultsentence").innerHTML = MathsMessage;
 	
+	if (!myMathsResult){
+		alert("Please enter a result");
+	
+	}
+	else {
+		if (myMathsResult > 90) {
+			mathsGrade = "A" ;
+		} else if (myMathsResult > 80) {
+			mathsGrade = "B";
+		} else {
+			mathsGrade ="F";
+		}
+	}	
 
+		var englishMessage = "Your result of" + myEnglishResult + "get you a grade" + englishGrade;
+		console.log(englishMessage);
+		document.getElementById("englishresultsentence").innerHTML = englishMessage;
+		
+		var irishMessage = "Your result of" + myIrishResult + "get you a grade" + irishGrade;
+		console.log(irishMessage);
+		document.getElementById("irishresultsentence").innerHTML = irishMessage;
+		
+		var mathsMessage = "Your result of" + myMathsResult + "get you a grade" + mathsGrade;
+		console.log(mathsMessage);
+		document.getElementById("mathsresultsentence").innerHTML = mathsMessage;
+
+}//end of function
